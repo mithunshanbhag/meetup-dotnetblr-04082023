@@ -23,7 +23,9 @@ void ConfigureServices(IServiceCollection services, IConfiguration config)
     services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
     // services
-    services.AddTransient<IWeatherService, WeatherService>();
+    services
+        .AddTransient<IWeatherService, WeatherService>();
+    //.AddTransient<IWeatherService, BetterWeatherService>();
 
     // repositories
     services.AddTransient<IWeatherRepository, WeatherRepository>();

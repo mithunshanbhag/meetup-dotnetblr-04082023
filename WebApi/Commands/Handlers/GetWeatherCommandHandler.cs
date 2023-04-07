@@ -9,6 +9,11 @@ public class GetWeatherCommandHandler : IRequestHandler<GetWeatherCommand, IActi
         _weatherService = weatherService;
     }
 
+    //public GetWeatherCommandHandler(IEnumerable<IWeatherService> weatherServices)
+    //{
+    //    _weatherService = weatherServices.Single(w => w.GetType() == typeof(WeatherService));
+    //}
+
     public async Task<IActionResult> Handle(GetWeatherCommand command, CancellationToken cancellationToken)
     {
         var city = command.City;
