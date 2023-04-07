@@ -38,6 +38,8 @@ void ConfigureApp(WebApplication webApp)
 {
     webApp.UseSwagger();
     webApp.UseSwaggerUI();
-    webApp.UseHttpsRedirection();
+    // @TODO: commented out because of port forwarding issues on codespaces
+    // details: https://github.com/orgs/community/discussions/7116
+    // webApp.UseHttpsRedirection();
     webApp.MapControllers();
 }
