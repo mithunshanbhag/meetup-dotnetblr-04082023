@@ -2,15 +2,9 @@
 
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
-		<Nullable>disable</Nullable>
+		    <Nullable>disable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<UserSecretsId>5bc8bf72-4b31-41f0-b698-203952f0dd22</UserSecretsId>
 	</PropertyGroup>
-
-	<ItemGroup>
-		<Content
-			Remove="C:\Users\localadmin\.nuget\packages\microsoft.azure.cosmos\3.32.3\contentFiles\any\netstandard2.0\ThirdPartyNotice.txt" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="AutoMapper" Version="12.0.1" />
@@ -18,12 +12,18 @@
 		<PackageReference Include="FluentValidation" Version="11.5.1" />
 		<PackageReference Include="MediatR" Version="12.0.1" />
 		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
-		<PackageReference Include="Microsoft.Azure.Cosmos" Version="3.32.3" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Constants\" />
+		<Folder Include="Models\Dto\" />
+		<Folder Include="Repositories\Interfaces\" />
+		<Folder Include="Repositories\Implementations\" />
+		<Folder Include="Requests\Definitions\" />
+		<Folder Include="Requests\Handlers\" />
+		<Folder Include="Requests\Validators\" />
+		<Folder Include="Services\Interfaces\" />
+		<Folder Include="Services\Implementations\" />
 	</ItemGroup>
 
 </Project>
